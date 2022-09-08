@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCastDetails } from '../../services/movieApi';
 import { CastList } from '../Cast/CastList';
+import style from '../Cast/Cast.module.css';
 
 export function Cast() {
   const { movieId } = useParams();
@@ -27,7 +28,7 @@ export function Cast() {
   return (
     <>
       {dataId !== undefined && (
-        <ul>
+        <ul className={style.CastList}>
           {castData
             .slice(0, 14)
             .map(({ id, name, character, profile_path }) => {

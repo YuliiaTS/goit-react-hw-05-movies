@@ -1,3 +1,5 @@
+import style from '../Cast/Cast.module.css';
+
 export function CastList({ actorName, character, actorPhoto }) {
   let src = `https://image.tmdb.org/t/p/original${actorPhoto}`;
 
@@ -6,8 +8,8 @@ export function CastList({ actorName, character, actorPhoto }) {
   }
 
   return (
-    <li>
-      <img src={src} alt="{actorName}" width='150px' />
+    <li className={style.CastItem}>
+      <img src={src} alt="{actorName}" width='100px' />
       <p>{actorName}</p>
       <p> Character: {character}</p>
     </li>
