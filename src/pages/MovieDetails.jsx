@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { getMovieDetails } from '../services/movieApi';
 import { MovieInfo } from '../components/MovieInfo/MovieInfo';
 import { AdditionalInfo } from '../components/AdditionalInfo/AdditionalInfo';
@@ -47,6 +47,7 @@ export function MovieDetails() {
       )}
 
       <AdditionalInfo location={location.state?.from ?? '/Home'} />
+      <Outlet />
     </>
   );
 }
