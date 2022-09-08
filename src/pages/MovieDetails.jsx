@@ -5,7 +5,7 @@ import { MovieInfo } from '../components/MovieInfo/MovieInfo';
 import { AdditionalInfo } from '../components/AdditionalInfo/AdditionalInfo';
 import { GoBackLink } from '../components/GoBackLink/GoBackLink';
 
-export function MovieDetails() {
+export default function MovieDetails() {
   const [movieDetails, setmovieDetails] = useState(null);
   const [genres, setGenres] = useState([]);
   const [poster, setPoster] = useState('');

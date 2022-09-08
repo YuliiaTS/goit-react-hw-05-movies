@@ -1,19 +1,19 @@
 import { lazy, Suspense } from 'react';
 import { Navigate } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
-import Layout from './Layout/Layout';
+// import Layout from './Layout/Layout';
 // import Home from '../pages/Home';
-import {Movies} from '../pages/Movies';
-import {MovieDetails} from '../pages/MovieDetails';
-import {Cast} from './Cast/Cast';
-import {Reviews} from './Reviews/Reviews';
+// import {Movies} from '../pages/Movies';
+// import {MovieDetails} from '../pages/MovieDetails';
+// import {Cast} from './Cast/Cast';
+// import {Reviews} from './Reviews/Reviews';
 
-// const Layout = lazy(() => import('./Layout/Layout.jsx'))
-const Home = lazy(() => import('../pages/Home'));
-// const Movies = lazy(() => import('../pages/Movies'))
-// const MovieDetails = lazy(() => import('../pages/MovieDetails'))
-// const Cast = lazy(() => import('./Cast/Cast' /* webpackChunkName: "Cast" */));
-// const Reviews = lazy(() => import('./Reviews/Reviews.js'))
+const Layout = lazy(() => import('./Layout/Layout.jsx' /* webpackChunkName: "Layout" */));
+const Home = lazy(() => import('../pages/Home.jsx' /* webpackChunkName: "Home" */));
+const Movies = lazy(() => import('../pages/Movies.jsx' /* webpackChunkName: "Movies" */));
+const MovieDetails = lazy(() => import('../pages/MovieDetails' /* webpackChunkName: "Details" */));
+const Cast = lazy(() => import('./Cast/Cast' /* webpackChunkName: "Cast" */));
+const Reviews = lazy(() => import('./Reviews/Reviews.js' /* webpackChunkName: "Reviews" */));
 
 export const App = () => {
   return (

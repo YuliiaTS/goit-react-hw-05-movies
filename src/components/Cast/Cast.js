@@ -4,7 +4,7 @@ import { getCastDetails } from '../../services/movieApi';
 import { CastList } from '../Cast/CastList';
 import style from '../Cast/Cast.module.css';
 
-export function Cast() {
+export default function Cast() {
   const { movieId } = useParams();
   const [castData, setCastData] = useState([]);
   const [dataId, setDataId] = useState(undefined);

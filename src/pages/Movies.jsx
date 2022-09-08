@@ -6,7 +6,7 @@ import { MovieList } from '../components/MovieList/MovieList';
 import { MovieItem } from '../components/MovieList/MovieItem';
 
 
-export function Movies() {
+export default function Movies() {
   const [moviesData, setMoviesData] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
 

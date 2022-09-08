@@ -1,4 +1,5 @@
 import style from '../Cast/Cast.module.css';
+import PropTypes from 'prop-types';
 
 export function CastList({ actorName, character, actorPhoto }) {
   let src = `https://image.tmdb.org/t/p/original${actorPhoto}`;
@@ -15,3 +16,9 @@ export function CastList({ actorName, character, actorPhoto }) {
     </li>
   );
 }
+
+CastList.propTypes = {
+  actorName: PropTypes.string.isRequired,
+  character: PropTypes.string.isRequired,
+  actorPhoto: PropTypes.string,
+};

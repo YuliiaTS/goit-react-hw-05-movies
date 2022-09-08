@@ -1,4 +1,5 @@
 import styles from './MovieInfo.module.css';
+import PropTypes from 'prop-types';
 
 export function MovieInfo({
   movieTitle,
@@ -31,3 +32,12 @@ export function MovieInfo({
     </div>
   );
 }
+
+MovieInfo.propTypes = {
+  movieTitle: PropTypes.string.isRequired,
+  movieOverview: PropTypes.string.isRequired,
+  movieRait: PropTypes.number.isRequired,
+  moviePoster: PropTypes.string,
+  movieGenres: PropTypes.string.isRequired,
+  movieDate: PropTypes.string.isRequired,
+};

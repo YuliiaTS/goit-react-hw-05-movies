@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from '../AdditionalInfo/AdditionalInfo.module.css';
+import PropTypes from 'prop-types';
 
 export function AdditionalInfo({ location }) {
   return (
@@ -28,3 +29,9 @@ export function AdditionalInfo({ location }) {
     </div>
   );
 }
+
+AdditionalInfo.propTypes = {
+  location: PropTypes.shape({
+    state: PropTypes.bool,
+  }).isRequired,
+};

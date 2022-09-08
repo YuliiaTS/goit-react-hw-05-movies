@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieReviews } from '../../services/movieApi';
 
-export function Reviews() {
+export default function Reviews() {
   const { movieId } = useParams();
   const [rewData, setRewData] = useState(null);
   useEffect(() => {
@@ -15,7 +15,6 @@ export function Reviews() {
 
         setRewData(data.results);
 
-        console.log(data.results);
       } catch (error) {
         console.log(error);
       }
@@ -40,8 +39,11 @@ export function Reviews() {
           })}
         </ul>
       ) : (
-        <div> 
-            <p>We don't have any reviews for this movie.</p>
+        <div
+        style={{
+          padding: '10px 30px',
+        }}> 
+            <p >We don't have any reviews for this movie.</p>
         </div>
       )}
     </>
